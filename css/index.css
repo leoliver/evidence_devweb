@@ -7,16 +7,15 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 #data_evento{
-    position: relative;
     color: white;
-    margin: 0 auto;
+    width: 100%;
     background-color: rgb(222, 128, 78);
     padding: 30px ;
-
-    
+    text-align: center;
 }
 
 #container {
