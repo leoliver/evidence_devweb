@@ -9,9 +9,33 @@ async function cadastro(){
     let termo = document.getElementById('terms').checked;
     form = {};
 
-    if (!termo || !nome || !email || !senha || !cpf_cnpj || !nascimento){
-        alert("Preencha os campos corretamente");
+    // if (!termo || !nome || !email || !senha || !cpf_cnpj || !nascimento){
+    //     alert("Preencha os campos corretamente");
+    //     return;
+    if(!nome){
+        alert("NOME é obrigatório");
         return;
+    }
+    if(!email){
+        alert("EMAIL é obrigatório");
+        return;
+    }
+    if(!senha){
+        alert("SENHA é obrigatório");
+        return;
+    }
+    if(!cpf_cnpj){
+        alert("CPF/CNPJ é obrigatório");
+        return;
+    }
+    if(!termo){
+        alert("Aceitar o TERMO é obrigatório");
+        return;
+    }
+    if(!nascimento){
+        alert("DATA DE ANIVERSÁRIO é obrigatório");
+        return;
+    
     } else {
         termo = 1;
         form = {
@@ -40,5 +64,13 @@ async function cadastro(){
         return;
     }
     let respostaErro = await api.json();
-        console.log(respostaErro.data.errors);
+        console.log(respostaErro)
+        // for(let i = 0; i < respostaErro.data.errors.length; i++)
+        //     console.log(respostaErro.data.errors[i]);
+
+        for (let tipo in respostaErro.data.errors) {
+            respostaErro.data.errors[tipo].forEach(erro => {
+                alert(erro)
+            });
+        }
 }
