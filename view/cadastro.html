@@ -3,35 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mixiricas's Store</title>
+    <title>EVIDENCE ©</title>
     <link rel="stylesheet" href="../css/cadastro.css">
     <script src="../script/cadastro.js"></script>
 </head>
 <body>
-    <h3>Bem-vindo ao cadastro de usuário</h3>
 
-    <a href="../index.html">Voltar para a página inicial</a>
+<header>
+    <div id="container">
+        <a href="../index.html"><img id="logo_evidence" src="../img/EVIDENCE com ® branco.png" alt="Logo Evidence"></a>
+    </div>
+</header>
 
-    <form>
-        <label for="name">Nome:</label>
-        <input type="text" name="name" id="name">
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email">
-        <br>
-        <label for="password">Senha:</label>
-        <input type="password" name="password" id="password">
-        <br>
-        <label for="cpf_cnpj">CPF/CNPJ:</label>
-        <input type="text" name="cpf_cnpj" id="cpf_cnpj">
-        <br>
-        <label for="birthday">Data de Nascimento:</label>
-        <input type="date" name="birthday" id="birthday">
-        <br>
-        <label for="terms">Termo</label>
-        <input type="checkbox" name="terms" id="terms">
-        <br>
-        <input type="button" value="Cadastre-se" onclick="cadastro()">
-    </form>
+<main>
+    <div class="form-container">
+        <h3>BEM-VINDO AO CADASTRO DE USUÁRIO</h3>
+
+        <form>
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" name="name" id="name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" name="password" id="password">
+            </div>
+
+            <div class="form-group">
+                <label for="cpf_cnpj">CPF/CNPJ:</label>
+                <input type="text" name="cpf_cnpj" id="cpf_cnpj">
+            </div>
+
+            <div class="form-group">
+                <label for="birthday">Data de Nascimento:</label>
+                <input type="date" name="birthday" id="birthday">
+            </div>
+
+            <div class="form-group terms-group">
+                <label for="terms">Termo</label>
+                <input type="checkbox" name="terms" id="terms">
+            </div>
+
+            <div class="form-group">
+                <input type="button" value="Cadastre-se" onclick="cadastro()">
+            </div>
+        </form>
+    </div>
+</main>
+
 </body>
 </html>

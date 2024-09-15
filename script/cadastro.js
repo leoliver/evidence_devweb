@@ -17,7 +17,7 @@ async function cadastro(){
         form = {
             "name": nome,
             "email": email,
-            "user_type": 1,
+            "user_type_id": 1,
             "password": senha,
             "cpf_cnpj": cpf_cnpj,
             "terms": termo,
@@ -36,8 +36,9 @@ async function cadastro(){
     if(api.ok){
         let resposta = await api.json();
         console.log(resposta);
+        alert(resposta.data)
         return;
     }
     let respostaErro = await api.json();
-        console.log(respostaErro.data.errors.cpf_cnpj);
+        console.log(respostaErro.data.errors);
 }

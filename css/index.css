@@ -1,6 +1,7 @@
 body {
-    background-color: lightgrey;
-    margin: 0
+    margin: 0;
+    font-family: "Roboto Mono", monospace;
+    font-weight: bold;
 }
 
 header {
@@ -10,12 +11,32 @@ header {
     align-items: center;
 }
 
+#link_cadastro {
+    color: #d78346;
+    text-decoration: none;
+}
+
+#logo_evidence {
+    width: 200px;
+    padding: 25px 0 18px 0;
+}
+
 #data_evento{
+    margin: 0;
+    color: white;
+    width: 100%;
+    background-color: #d78346;
+    text-align: center;
+}
+
+#data_evento > p{
+    margin: 0;
     color: white;
     width: 100%;
     background-color: rgb(222, 128, 78);
-    padding: 30px ;
+    padding: 3px 0 ;
     text-align: center;
+    font-size: 12px;
 }
 
 #container {
@@ -24,13 +45,24 @@ header {
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    padding: 0 30px;
+    margin: 0;
+    width: 100%;
 }
 
 #container > p {
-    color: rgb(222, 128, 78);
+    color: #d78346;
+}
+
+#container > a {
+    padding: 0 30px;
 }
 
 #icon {
     width: 30px;
+    margin:  0 20px;
+}
+
+#banner {
+    width: 100%;
+    margin: 0;
 }
