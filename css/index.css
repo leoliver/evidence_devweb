@@ -11,17 +11,17 @@ header {
     align-items: center;
 }
 
-#link_cadastro {
+#link-cadastro {
     color: #d78346;
     text-decoration: none;
 }
 
-#logo_evidence {
+#logo-evidence {
     width: 200px;
     padding: 25px 0 18px 0;
 }
 
-#data_evento{
+#data-evento{
     margin: 0;
     color: white;
     width: 100%;
@@ -29,7 +29,7 @@ header {
     text-align: center;
 }
 
-#data_evento > p{
+#data-evento > p{
     margin: 0;
     color: white;
     width: 100%;

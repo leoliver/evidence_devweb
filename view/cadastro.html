@@ -9,53 +9,71 @@
 </head>
 <body>
 
-<header>
-    <div id="container">
-        <a href="../index.html"><img id="logo_evidence" src="../img/EVIDENCE com ® branco.png" alt="Logo Evidence"></a>
-    </div>
-</header>
+    <header>
+        <div id="container">
+            <a href="../index.html"><img id="logo-header" src="../img/EVIDENCE com ® branco.png" alt="Logo Evidence"></a>
+        </div>
+    </header>
 
-<main>
-    <div class="form-container">
-        <h3>BEM-VINDO AO CADASTRO DE USUÁRIO</h3>
-
-        <form>
-            <div class="form-group">
-                <label for="name">Nome:</label>
-                <input type="text" name="name" id="name">
+    <main>
+        <div class="bloco-cadastro">
+            <div class="form-container">
+                <h3>BEM-VINDO AO CADASTRO DE USUÁRIO</h3>
+        
+                <form>
+                    <div class="form-div">
+                        <label for="name">Nome:</label>
+                        <input type="text" name="name" id="name" placeholder="Nome">
+                    </div>
+        
+                    <div class="form-div">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Email">
+                    </div>
+        
+                    <div class="form-div">
+                        <label for="password">Senha:</label>
+                        <input type="password" name="password" id="password" placeholder="Senha">
+                    </div>
+        
+                    <div class="form-div">
+                        <label for="cpf_cnpj">CPF/CNPJ:</label>
+                        <input type="text" name="cpf_cnpj" id="cpf_cnpj" placeholder="CPF/CNPJ">
+                    </div>
+        
+                    <div class="form-div">
+                        <label for="birthday">Data de Nascimento:</label>
+                        <input type="date" name="birthday" id="birthday">
+                    </div>
+        
+                    <div class="form-div terms-div">
+                        <label for="terms">Termo</label>
+                        <input type="checkbox" name="terms" id="terms">
+                    </div>
+        
+                    <div class="form-div">
+                        <input type="button" value="Cadastre-se" onclick="cadastro()">
+                    </div>
+                </form>
             </div>
-
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email">
+            <div class="image-section">
+                <img src="../img/Frame 2.png" alt="">
             </div>
+        </div>
+    </main>
 
-            <div class="form-group">
-                <label for="password">Senha:</label>
-                <input type="password" name="password" id="password">
+    <footer>
+        <div id="container-footer">
+            <div id="link-div">
+                <a class="link-footer" href="">Terms</a>
+                <a class="link-footer" href="">About</a>
+                <a class="link-footer" href="">Privacy</a>
+                <a class="link-footer" href="">Contact</a>
             </div>
-
-            <div class="form-group">
-                <label for="cpf_cnpj">CPF/CNPJ:</label>
-                <input type="text" name="cpf_cnpj" id="cpf_cnpj">
-            </div>
-
-            <div class="form-group">
-                <label for="birthday">Data de Nascimento:</label>
-                <input type="date" name="birthday" id="birthday">
-            </div>
-
-            <div class="form-group terms-group">
-                <label for="terms">Termo</label>
-                <input type="checkbox" name="terms" id="terms">
-            </div>
-
-            <div class="form-group">
-                <input type="button" value="Cadastre-se" onclick="cadastro()">
-            </div>
-        </form>
-    </div>
-</main>
+            <a href="../index.html"><img id="logo-footer" src="../img/EVIDENCE com ® branco.png" alt="Logo Evidence"></a>
+            <p>© 2024. All Right Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>

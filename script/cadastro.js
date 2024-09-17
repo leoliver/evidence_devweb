@@ -9,9 +9,8 @@ async function cadastro(){
     let termo = document.getElementById('terms').checked;
     form = {};
 
-    // if (!termo || !nome || !email || !senha || !cpf_cnpj || !nascimento){
-    //     alert("Preencha os campos corretamente");
-    //     return;
+    //Conjunto de verificações para validar se os campos foram preenchidos
+
     if(!nome){
         alert("NOME é obrigatório");
         return;
@@ -57,17 +56,18 @@ async function cadastro(){
         }
     });
 
+
+    //Verifica se a respota da requisição foi bem sucedida ou não
+    //Em caso de sucesso retorna a mensagem de que foi enviado um email ao email informado no formulário
     if(api.ok){
         let resposta = await api.json();
         console.log(resposta);
         alert(resposta.data)
         return;
     }
+    //Em caso de erro a iteração verifica todos os erros e exibe um alerta para cade erro encontrado na requisição
     let respostaErro = await api.json();
         console.log(respostaErro)
-        // for(let i = 0; i < respostaErro.data.errors.length; i++)
-        //     console.log(respostaErro.data.errors[i]);
-
         for (let tipo in respostaErro.data.errors) {
             respostaErro.data.errors[tipo].forEach(erro => {
                 alert(erro)
