@@ -36,7 +36,6 @@ async function cadastro(){
         return;
     
     } else {
-        termo = 1;
         form = {
             "name": nome,
             "email": email,
@@ -64,7 +63,13 @@ async function cadastro(){
         console.log(resposta);
         alert(resposta.data)
         return;
+    } else {
+        if(api.status===500){
+            alert("Ocorreu um erro, tente novamente!");
+            return;
+        }
     }
+    
     //Em caso de erro a iteração verifica todos os erros e exibe um alerta para cade erro encontrado na requisição
     let respostaErro = await api.json();
         console.log(respostaErro)
