@@ -7,7 +7,7 @@ async function cadastro(){
     let cpf_cnpj = document.getElementById('cpf_cnpj').value;
     let nascimento = document.getElementById('birthday').value;
     let termo = document.getElementById('terms').checked;
-    form = {};
+    let form = {};
 
     //Conjunto de verificações para validar se os campos foram preenchidos
 

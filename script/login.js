@@ -3,7 +3,12 @@ async function login() {
     let email = document.getElementById('email').value;
     let senha = document.getElementById('password').value;
 
-    form = {
+    if(!email || !senha){
+        alert("Preencha os dados corretamente");
+        return;
+    }
+
+    let form = {
         "email": email,
         "password": senha,
         "user_type_id":1
@@ -19,7 +24,7 @@ async function login() {
 
     if(api.ok) {
         let resposta = await api.json();
-        window.location.href = "home.html"
+        window.location.assign("home.html");
         console.log(resposta);
         return;
     } 

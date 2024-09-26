@@ -164,3 +164,8 @@ footer {
     color: #ffffff;
     font-weight: 200;
 }
+
+.link-form a {
+    color: #a85515;
+    text-decoration: none;
+}

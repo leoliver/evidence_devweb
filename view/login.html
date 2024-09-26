@@ -8,25 +8,57 @@
     <script src="../script/login.js"></script>
 </head>
 <body>
+
+    <header>
+        <div id="container">
+            <a href="../index.html"><img id="logo-header" src="../img/EVIDENCE com ® branco.png" alt="Logo Evidence"></a>
+        </div>
+    </header>
+
     <main>
-        <h4>Login</h4>
+        <div class="bloco-login">
+            <div id="form-container">
+                <div>
+                    <a href="../index.html"><img id="logo-bloco" src="../img/EVIDENCE com ®.png" alt="Logo Evidence"></a>
+                </div>
+                <h2>BEM-VINDO AO LOGIN</h2>
 
-        <form>
-            <div>
-                <label for="email">Email ou CPF/CNPJ</label>
-                <input type="email" name="email" id="email">
-            </div>
-            <div>
-                <label for="pass">Senha</label>
-                <input type="password" name="pass" id="password">
-            </div>
+                <form>
+                    <div class="form-div">
+                        <label for="email">Email ou CPF/CNPJ:</label>
+                        <input type="email" name="email" id="email" placeholder="Email ou CPF/CNPJ">
+                    </div>
 
-            <input type="button" value="Login" onclick="login()">
-            <a href="../index.html">Voltar para a página inicial</a>
-            <a href="endereco.html">Ver meus endereços</a>
+                    <div class="form-div">
+                        <label for="pass">Senha:</label>
+                        <input type="password" name="pass" id="password" placeholder="Senha">
+                    </div>
 
-            <a href="cadastro.html">Não tem cadastro? Clique aqui!</a>
-        </form>
+                    <div class="form-div">
+                        <input id="botao-login" type="button" value="Login" onclick="login()">
+                    </div>
+
+                    <div class="link-bloco">   
+                        <div class="link-form">
+                            <a href="cadastro.html">Não tem cadastro? <u>CLIQUE AQUI!</u></a>
+                        </div>
+                    </div>
+                </form>
+            </div>   
+        </div>
     </main>
+
+    <footer>
+        <div id="container-footer">
+            <div id="link-div">
+                <a class="link-footer" href="">Terms</a>
+                <a class="link-footer" href="">About</a>
+                <a class="link-footer" href="">Privacy</a>
+                <a class="link-footer" href="">Contact</a>
+            </div>
+            <a href="../index.html"><img id="logo-footer" src="../img/EVIDENCE com ® branco.png" alt="Logo Evidence"></a>
+            <p>© 2024. All Right Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
