@@ -24,12 +24,15 @@ async function login() {
 
     if(api.ok) {
         let resposta = await api.json();
+        if(!localStorage.getItem('user')){
+            localStorage.setItem('user', JSON.stringify(resposta))
+        } else {
+            alert("Você já está logado. Redirecionando para a página principal")
+        }
         window.location.assign("home.html");
-        console.log(resposta);
         return;
     } 
     
     let respostaErro = await api.json();
-        console.log(respostaErro)
         alert(respostaErro.data.errors)
 }
