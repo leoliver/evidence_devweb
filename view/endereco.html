@@ -3,16 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mixiricas's Store</title>
-    <link rel="stylesheet" href="style.css">
+    <title>EVIDENCE ©</title>
+    <script src="../script/endereco.js"></script>
+    <link rel="stylesheet" href="../css/endereco.css">
+    
 </head>
 <body>
-    <h2>Meus Endereços</h2>
+    <button id="botao-modal">Modal</button>
+    <br>
+    <br>
+    <br>
+    <div id="modal" class="modal">
+        <h4>Cadastro de endereço</h4>
+        <button id="botao-close">Fechar</button>
+        <form>
+            <div class="form-div">
+                <label for="title">Título</label>
+                <input type="text" name="title" id="title" placeholder="Título">
+            </div>
+            <div class="form-div">
+                <label for="cep">CEP</label>
+                <input type="number" name="cep" id="cep" placeholder="CEP">
+            </div>
+            <div class="form-div">
+                <label for="address">Logradouro</label>
+                <input type="text" name="address" id="address" placeholder="Logradouro">
+            </div>
+            <div class="form-div">
+                <label for="number">Número</label>
+                <input type="text" name="number" id="number" placeholder="Número">
+            </div>
+            <div class="form-div">
+                <label for="complement">Complemento</label>
+                <input type="text" name="complement" id="complement" placeholder="Complemento">
+            </div>
+            <div class="form-div">
+                <input id="botao-endereco" type="button" value="Cadastrar" onclick="cadastrarEndereco()">
+            </div>
+        </form>
+    </div>
+    <!-- <h2>Meus Endereços</h2>
+
     <ul>
         <li>Paraisópolis</li>
         <li>Morumbi</li>
         <li>Paraíso</li>
     </ul>
-    <a href="../index.html">Voltar para a página inicial</a>
+    <a href="../index.html">Voltar para a página inicial</a> -->
 </body>
+
 </html>
