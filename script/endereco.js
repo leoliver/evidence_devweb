@@ -54,5 +54,6 @@ async function cadastrarEndereco() {
         console.log(resposta);
         alert(`O Seu endereço ${titulo} foi adicionado com sucesso`)
         return;
+        //renoir mudou algo
     } 
 }
