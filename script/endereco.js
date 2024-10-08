@@ -53,7 +53,7 @@ async function cadastrarEndereco() {
         let resposta = await api.json();
         console.log(resposta);
         alert(`O Seu endereço ${titulo} foi adicionado com sucesso`)
+        window.location.assign("home.html");
         return;
-        //renoir mudou algo
     } 
 }

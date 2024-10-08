@@ -72,6 +72,9 @@ async function cadastro(){
     
     //Em caso de erro a iteração verifica todos os erros e exibe um alerta para cade erro encontrado na requisição
     let respostaErro = await api.json();
+        if (respostaErro.data.errors=="cpf_cnpj invalid"){
+            alert("cpf_cnpj invalid")
+        }
         console.log(respostaErro)
         for (let tipo in respostaErro.data.errors) {
             respostaErro.data.errors[tipo].forEach(erro => {
