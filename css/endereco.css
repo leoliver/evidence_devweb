@@ -1,3 +1,75 @@
-.modal {
-    display: none;
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    font-weight: bold;
+}
+
+nav.menu-lateral {
+    width: 75px;
+    height: 100%;
+    background-color: #d78346;
+    padding: 25px 0 40px 1%;
+    position:fixed;
+    box-shadow: 3px 0 0 #fde4d2;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .2s;
+}
+
+nav.menu-lateral:hover{
+    width: 300px;
+}
+
+.btn-expandir {
+    display: flex;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i{
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#logo-menu {
+    width: 200px;
+    padding: 0px 0 18px 53px;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu{
+    transition: .2s;
+}
+
+ul li.item-menu:hover{
+    background: #ffe1cc;
+}
+
+ul li.item-menu a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 4px 6%;
+    display: flex;
+    line-height: 40px;
+}
+ul li.item-menu a:hover{
+    color:#d78346
+}
+
+ul li.item-menu a .txt-link {
+    margin-left: 40px;
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 20px;
+    margin-left: 10px;
 }
