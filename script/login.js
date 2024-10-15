@@ -26,8 +26,6 @@ async function login() {
         let resposta = await api.json();
         if(!localStorage.getItem('user')){
             localStorage.setItem('user', JSON.stringify(resposta))
-        } else {
-            alert("Você já está logado. Redirecionando para a página principal")
         }
         window.location.assign("home.html");
         return;
