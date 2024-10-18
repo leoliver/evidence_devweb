@@ -16,8 +16,19 @@ async function listarEnderecos() {
     if(api.ok) {
         let resposta = await api.json();
         console.log(resposta);
-        return;
-    } 
+    }
+
+    lista_enderecos = document.getElementById("lista_enderecos")
+
+    let teste = [
+        {title: "Casa", cep: "05640001", address: "Rua xyz", numero: 123},
+        {title: "Casa", cep: "05640001", address: "Rua xyz", numero: 123}
+    ]
+    teste.forEach(endereco => {
+        let item = document.createElement("tr") 
+        lista_enderecos.appendChild(item)
+    });
 }
+
 
 listarEnderecos()
