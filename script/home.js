@@ -15,19 +15,41 @@ async function listarEnderecos() {
 
     if(api.ok) {
         let resposta = await api.json();
-        console.log(resposta);
+        console.log(resposta.data);
+
+        lista_enderecos = document.getElementById("enderecos_listados")
+
+        let teste = [
+            {title: "Casa", cep: "05640001", address: "Rua xyz", number: 123},
+            {title: "Casa", cep: "05640001", address: "Rua xyz", number: 123}
+        ]
+
+        // teste.forEach(endereco => {
+        //     let linha = document.createElement("tr") 
+        //     linha.innerHTML = `
+        //         <td>${endereco.title}</td>
+        //         <td>${endereco.cep}</td>
+        //         <td>${endereco.address}</td>
+        //         <td>${endereco.number}</td>
+        //     `
+        //     lista_enderecos.appendChild(linha)
+        // });
+        
+
+        resposta.data.forEach(endereco => {
+            // console.log(endereco)
+            let linha = document.createElement("tr") 
+            linha.innerHTML = `
+                <td>${endereco.title}</td>
+                <td>${endereco.cep}</td>
+                <td>${endereco.address}</td>
+                <td>${endereco.number}</td>
+            `
+            lista_enderecos.appendChild(linha)
+        });
     }
 
-    lista_enderecos = document.getElementById("lista_enderecos")
-
-    let teste = [
-        {title: "Casa", cep: "05640001", address: "Rua xyz", numero: 123},
-        {title: "Casa", cep: "05640001", address: "Rua xyz", numero: 123}
-    ]
-    teste.forEach(endereco => {
-        let item = document.createElement("tr") 
-        lista_enderecos.appendChild(item)
-    });
+    
 }
 
 

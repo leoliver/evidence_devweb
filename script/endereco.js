@@ -4,22 +4,6 @@ let apiRetorno = JSON.parse(localStorage.getItem('user'));
 
 let token = "Bearer " + apiRetorno.access_token;
 
-window.onload = function(){ 
-    let modal = document.getElementById("modal");
-
-    let botaoModal = document.getElementById("botao-modal");
-
-    let botaoClose = document.getElementById("botao-close");
-
-    botaoModal.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    botaoClose.onclick = function() {
-        modal.style.display = "none"
-    }
-};
-
 async function cadastrarEndereco() {
     let titulo = document.getElementById("title").value;
     let cep = document.getElementById("cep").value;

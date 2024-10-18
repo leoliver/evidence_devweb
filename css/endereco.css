@@ -6,7 +6,7 @@
     font-weight: bold;
 }
 body {
-    height: auto;
+    height: 100vh;
     margin: 0;
     font-family: "Roboto Mono", monospace;
     font-weight: bold;
