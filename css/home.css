@@ -164,6 +164,7 @@ main {
 }
 
 footer {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,4 +204,42 @@ footer {
     font-size: 1rem;
     color: #ffffff;
     font-weight: 200;
+}
+
+
+table{
+    width:98%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    padding: 10px;
+}
+
+
+th {
+    height: 40px;
+    font-size: 1.25rem;
+    font-weight: bolder;
+}
+
+.identificar-coluna {
+    color: #d78346;
+    justify-content: center;
+}
+
+.enderecobutao{
+    margin-top: 5px;
+    color: #fff;
+    border: none;
+    background-color: #d78346;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.enderecobutao:hover{
+    background-color: #a15c2a;
 }
