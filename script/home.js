@@ -1,4 +1,4 @@
-let url_lista = 'https://go-wash-api.onrender.com/api/auth/address'
+let url_lista = 'https://go-wash-api.onrender.com/api/auth/address/'
 
 let apiRetorno = JSON.parse(localStorage.getItem('user'))
 
@@ -30,7 +30,7 @@ async function listarEnderecos() {
                     <td>${endereco.number}</td>
                     <td>${!endereco.complement ? "N/A" : endereco.complement}</td>
                     <td><button type="button" class="enderecobutao" onclick="Atualizar(${endereco.id})">Atualizar</button></td>
-                    <td><button type="button" class="enderecobutao" onclick="Deletar()">Deletar</button></td>
+                    <td><button type="button" class="enderecobutao" onclick="Deletar(${endereco.id})">Deletar</button></td>
                 </tr>
             `
             lista_enderecos.appendChild(linha)
@@ -40,6 +40,25 @@ async function listarEnderecos() {
 
 function Atualizar(id) {
     window.location.assign("editar_endereco.html?id="+id);
+}
+
+async function Deletar(id) {
+    let url_delete = url_lista+id
+
+    let api_delete = await fetch(url_delete,{
+        method:"DELETE",
+        headers:{
+            'Authorization': token
+        }
+    });
+
+    if(api_delete.ok) {
+        let resposta = await api_delete.json();
+        console.log(resposta);
+
+        alert("Endereço excluído com sucesso")
+        window.location.reload()
+    }
 }
 
 
