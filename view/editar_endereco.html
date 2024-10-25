@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVIDENCE ©</title>
+    <script src="../script/editar_endereco.js"></script>
+    <link rel="stylesheet" href="../css/editar_endereco.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header></header>
+        <div id="container">
+            <a href="../index.html"><img id="logo-header" src="../img/EVIDENCE com ® branco.png" alt="Logo Evidence"></a>
+        </div>
+    </header>
+
+    <nav class="menu-lateral">
+        <div class="btn-expandir">
+            <i class="bi bi-list"></i>
+            <a href="../view/home.html"><img id="logo-menu" src="../img/EVIDENCE com ® branco.png" alt=""></a>
+        </div>
+        <ul>
+            <li class="item-menu">
+                <a href="../view/home.html">
+                    <span class="icon"><i class="bi bi-house"></i></span>
+                    <span class="txt-link">Home</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="../view/endereco.html">
+                    <span class="icon"><i class="bi bi-geo-alt"></i></span>
+                    <span class="txt-link">Endereço</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="bloco-endereco">
+            <div class="form-container">
+                <h2>ATUALIZAÇÃO DE ENDEREÇO</h2>
+        
+                <form>
+                    <div class="form-div">
+                        <label for="title">ID</label>
+                        <input type="text" name="id" id="id" placeholder="ID" readonly>
+                    </div>
+                    <div class="form-div">
+                        <label for="title">Título</label>
+                        <input type="text" name="title" id="title" placeholder="Título">
+                    </div>
+                    <div class="form-div">
+                        <label for="cep">CEP</label>
+                        <input type="number" name="cep" id="cep" placeholder="CEP">
+                    </div>
+                    <div class="form-div">
+                        <label for="address">Logradouro</label>
+                        <input type="text" name="address" id="address" placeholder="Logradouro">
+                    </div>
+                    <div class="form-div">
+                        <label for="number">Número</label>
+                        <input type="text" name="number" id="number" placeholder="Número">
+                    </div>
+                    <div class="form-div">
+                        <label for="complement">Complemento</label>
+                        <input type="text" name="complement" id="complement" placeholder="Complemento">
+                    </div>
+                    <div class="form-div">
+                        <input id="botao-endereco" type="button" value="Atualizar" onclick="atualizarEndereco()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="container-footer">
+            <div id="link-div">
+                <a class="link-footer" href="">Terms</a>
+                <a class="link-footer" href="">About</a>
+                <a class="link-footer" href="">Privacy</a>
+                <a class="link-footer" href="">Contact</a>
+            </div>
+            <a href="../index.html"><img id="logo-footer" src="../img/EVIDENCE com ® branco.png" alt="Logo Evidence"></a>
+            <p>© 2024. All Right Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -17,7 +17,7 @@ async function listarEnderecos() {
         let resposta = await api.json();
         console.log(resposta.data);
 
-        lista_enderecos = document.getElementById("enderecos_listados")
+        let lista_enderecos = document.getElementById("enderecos_listados")
 
         resposta.data.forEach(endereco => {
             let linha = document.createElement("tr") 
@@ -29,15 +29,17 @@ async function listarEnderecos() {
                     <td>${endereco.address}</td>
                     <td>${endereco.number}</td>
                     <td>${!endereco.complement ? "N/A" : endereco.complement}</td>
-                    <td><button type="button" class="enderecobutao" onclick="EditarEndereco()">Editar</button></td>
-                    <td><button type="button" class="enderecobutao" onclick="DeletarEndereco()">Deletar</button></td>
+                    <td><button type="button" class="enderecobutao" onclick="Atualizar(${endereco.id})">Atualizar</button></td>
+                    <td><button type="button" class="enderecobutao" onclick="Deletar()">Deletar</button></td>
                 </tr>
             `
             lista_enderecos.appendChild(linha)
         });
-    }
+    }  
+}
 
-    
+function Atualizar(id) {
+    window.location.assign("editar_endereco.html?id="+id);
 }
 
 

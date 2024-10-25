@@ -1,0 +1,238 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    font-weight: bold;
+}
+body {
+    height: auto;
+    margin: 0;
+    font-family: "Roboto Mono", monospace;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(../img/mochakk_madridd.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 26px;
+}
+
+#logo-header {
+    width: 200px;
+    padding: 25px 0 18px 0;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav.menu-lateral {
+    width: 75px;
+    height: 100%;
+    background-color: #d78346;
+    padding: 25px 0 40px 1%;
+    position:fixed;
+    box-shadow: 3px 0 0 #fde4d2;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .2s;
+}
+
+nav.menu-lateral:hover{
+    width: 300px;
+}
+
+.btn-expandir {
+    display: flex;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i{
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#logo-menu {
+    width: 200px;
+    padding: 0px 0 18px 53px;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu{
+    transition: .2s;
+}
+
+ul li.item-menu:hover{
+    background: #ffe1cc;
+}
+
+ul li.item-menu a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 4px 6%;
+    display: flex;
+    line-height: 40px;
+}
+ul li.item-menu a:hover{
+    color:#d78346
+}
+
+ul li.item-menu a .txt-link {
+    margin-left: 40px;
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 50px 0;
+}
+.bloco-endereco {
+    display: flex;
+    width: auto;
+    padding: 30px;
+    background-color:#ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    position:static;
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20PX;
+    border-radius: 8px;
+    max-width: 700px;
+    width: 100%;
+}
+
+
+h2 {
+    margin-top: 10pxpx;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #a85515;
+}
+
+form {
+    width: 300px;
+}
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-div label {
+    margin-bottom: 5px;
+}
+
+.form-div input{
+    padding: 10px;
+    border: 2px solid #ecab7c;
+    border-radius: 8px;
+}
+
+.form-div input[type="button"] {
+    background-color: #d78346;
+    color: white;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-div input[type="button"]:hover {
+    background-color: #b8682b;
+}
+
+.link-bloco {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.link-form {
+    text-align: center;
+}
+
+.link-form a {
+    color: #a85515;
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(184, 104, 43, 0.9);
+    min-height: 100px;
+}
+
+#logo-footer {
+    width: 120px;
+    padding: 25px 0 18px 0;
+    margin: 0 300px;
+}
+
+#container-footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.link-footer {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#link-div{
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+}
+
+#container-footer p {
+    font-family: "Roboto Mono", monospace;
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 200;
+}
