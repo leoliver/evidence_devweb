@@ -4,6 +4,9 @@ let apiRetorno = JSON.parse(localStorage.getItem('user'))
 
 let token = "Bearer " + apiRetorno.access_token;
 
+let titulo_texto = document.getElementById('nome')
+
+titulo_texto.innerHTML += `${apiRetorno.user.name}`
 
 async function listarEnderecos() {
     let api = await fetch(url_lista,{
@@ -15,7 +18,6 @@ async function listarEnderecos() {
 
     if(api.ok) {
         let resposta = await api.json();
-        console.log(resposta.data);
 
         let lista_enderecos = document.getElementById("enderecos_listados")
 
@@ -54,7 +56,6 @@ async function Deletar(id) {
 
     if(api_delete.ok) {
         let resposta = await api_delete.json();
-        console.log(resposta);
 
         alert("Endereço excluído com sucesso")
         window.location.reload()

@@ -28,7 +28,6 @@ async function login() {
             localStorage.setItem('user', JSON.stringify(resposta))
         }
         window.location.assign("home.html");
-        return;
     } 
     
     let respostaErro = await api.json();

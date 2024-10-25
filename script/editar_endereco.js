@@ -17,16 +17,13 @@ async function listarEnderecoId(){
     
     if(api.ok) {
         let resposta = await api.json();
-        console.log(resposta.data);
 
         document.getElementById("id").value = resposta.data.id
         document.getElementById("title").value = resposta.data.title;
         document.getElementById("cep").value = resposta.data.cep;
         document.getElementById("address").value = resposta.data.address;
         document.getElementById("number").value = resposta.data.number;
-        document.getElementById("complement").value = resposta.data.complement;
-
-        
+        document.getElementById("complement").value = resposta.data.complement;   
     }
 }
 
@@ -37,6 +34,11 @@ async function atualizarEndereco(){
     let endereco = document.getElementById("address").value
     let numero = document.getElementById("number").value
     let complemento = document.getElementById("complement").value
+
+    if(!titulo || !cep || !endereco || !numero){
+        alert("Campo em branco inválido");
+        return;
+    }
 
     let novo_form = {
     "title":titulo,
@@ -56,8 +58,6 @@ async function atualizarEndereco(){
     });
 
     if(api_atualizar.ok) {
-        let resposta_atualizar = await api_atualizar.json();
-        console.log(resposta_atualizar);
         alert(`O Seu endereço ${titulo} foi atualizado com sucesso`)
         window.location.assign("home.html");
     }

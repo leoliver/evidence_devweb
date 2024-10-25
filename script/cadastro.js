@@ -60,7 +60,6 @@ async function cadastro(){
     //Em caso de sucesso retorna a mensagem de que foi enviado um email ao email informado no formulário
     if(api.ok){
         let resposta = await api.json();
-        console.log(resposta);
         alert(resposta.data)
         return;
     } else {
@@ -72,13 +71,23 @@ async function cadastro(){
     
     //Em caso de erro a iteração verifica todos os erros e exibe um alerta para cade erro encontrado na requisição
     let respostaErro = await api.json();
-        if (respostaErro.data.errors=="cpf_cnpj invalid"){
-            alert("cpf_cnpj invalid")
-        }
-        console.log(respostaErro)
+
+    if (Array.isArray(respostaErro.data.errors)) {
         for (let tipo in respostaErro.data.errors) {
             respostaErro.data.errors[tipo].forEach(erro => {
                 alert(erro)
             });
         }
+    } else {
+        alert(respostaErro.data.errors)
+    }
+
+    // if (respostaErro.data.errors=="cpf_cnpj invalid"){
+    //     alert("cpf_cnpj invalid")
+    // }
+    // for (let tipo in respostaErro.data.errors) {
+    //     respostaErro.data.errors[tipo].forEach(erro => {
+    //         alert(erro)
+    //     });
+    // }
 }
