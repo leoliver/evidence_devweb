@@ -4,6 +4,7 @@ let apiRetorno = JSON.parse(localStorage.getItem('user'))
 
 let token = "Bearer " + apiRetorno.access_token;
 
+//Adiciona o nome do usuário que está logado 
 let titulo_texto = document.getElementById('nome')
 
 titulo_texto.innerHTML += `${apiRetorno.user.name}`
@@ -60,6 +61,26 @@ async function Deletar(id) {
         alert("Endereço excluído com sucesso")
         window.location.reload()
     }
+}
+
+const popup = document.getElementById('popup');
+const overlay = document.getElementById('overlay');
+
+function Logout() {
+    localStorage.removeItem('user')
+    window.location.assign("../index.html")
+}
+
+overlay.onclick = fechaPopup;
+
+function abrePopup() {
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+}
+
+function fechaPopup() {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
 }
 
 
