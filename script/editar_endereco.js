@@ -18,7 +18,6 @@ async function listarEnderecoId(){
     if(api.ok) {
         let resposta = await api.json();
 
-        document.getElementById("id").value = resposta.data.id
         document.getElementById("title").value = resposta.data.title;
         document.getElementById("cep").value = resposta.data.cep;
         document.getElementById("address").value = resposta.data.address;

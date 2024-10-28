@@ -251,10 +251,30 @@ th {
     top: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid #ccc;
+    border-radius: 10px;
     background-color: #fff;
     padding: 20px;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#btn_sim{
+    margin-top: 5px;
+    color: #fff;
+    border: none;
+    background-color: #d78346;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer; 
+}
+
+#btn_nao{
+    margin-top: 5px;
+    color: #fff;
+    border: none;
+    background-color: #d78346;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer; 
 }
 
 #overlay {
@@ -277,5 +297,7 @@ th {
 
 #logout {
     cursor: pointer;
-    height: 45px;
+    height: 30px;
+    margin-right: 22px;
+    margin-bottom: 15px;
 }
